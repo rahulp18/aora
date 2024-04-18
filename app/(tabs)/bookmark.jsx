@@ -32,7 +32,7 @@ const Bookmark = () => {
             title={item.title}
             thumbnail={item.thumbnail}
             video={item.video}
-            creator={item.creator.username}
+            creator={item.creator?.username}
             avatar={item.creator.avatar}
             videoId={item.$id}
           />

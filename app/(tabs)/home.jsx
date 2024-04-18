@@ -38,7 +38,7 @@ const Home = () => {
             title={item.title}
             thumbnail={item.thumbnail}
             video={item.video}
-            creator={item.creator.username}
+            creator={item.creator?.username}
             avatar={item.creator.avatar}
             videoId={item.$id}
           />
@@ -51,7 +51,7 @@ const Home = () => {
                   Welcome Back
                 </Text>
                 <Text className="text-2xl font-psemibold text-white">
-                  {user.username}
+                  {user?.username}
                 </Text>
               </View>
               <View className="mt-1.5">

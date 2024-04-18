@@ -27,7 +27,7 @@ const Profile = () => {
     await signOut();
     setUser(null);
     setIsLoggedIn(false);
-    router.push('/sign-in');
+    router.replace('/sign-in');
   };
   return (
     <SafeAreaView className="bg-primary h-full">
@@ -39,7 +39,7 @@ const Profile = () => {
             title={item.title}
             thumbnail={item.thumbnail}
             video={item.video}
-            creator={item.creator.username}
+            creator={item.creator?.username}
             avatar={item.creator.avatar}
             videoId={item.$id}
           />
@@ -67,7 +67,7 @@ const Profile = () => {
               />
             </View>
             <InfoBox
-              title={user.username}
+              title={user?.username}
               containerStyles="mt-5"
               titleStyles="text-lg"
             />
